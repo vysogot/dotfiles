@@ -9,8 +9,9 @@ filetype plugin indent on
 "let g:ctrlp_working_path_mode = 0
 let mapleader = ","
 let g:netrw_sizestyle= "h"
-let g:airline_section_b = ''
-let g:airline_section_z = '%b'
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
+" let g:airline_section_b = ''
+" let g:airline_section_z = '%b'
 set tags=./tags;,tags;
 
 autocmd BufWritePre * %s/\s\+$//e
