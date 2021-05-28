@@ -1,17 +1,17 @@
 # Shell
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ "
-export CLICOLOR=1
+# export CLICOLOR=1
 # export LSCOLORS=ExFxBxDxCxegedabagacad
-# export PS1="\e[47m\u@\h \w> \e[m "
-export TERM=xterm-256color
+# export TERM=xterm-256color
+
 export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
-# export TERM=xterm-256color
 export ASDF_DIR=$(brew --prefix asdf)
+export FZF_DEFAULT_OPTS='--height=40% --preview="cat {}" --preview-window=right:60%:wrap'
 
 . ~/.bashrc
 
-alias ls='ls -GFh'
+# alias ls='ls -GFh'
 alias bp='vim ~/.bash_profile'
 alias vp='vim ~/.vimrc'
 alias src='source ~/.bash_profile'
@@ -31,9 +31,8 @@ alias trake='RAILS_ENV=test rake'
 alias abun='asdf exec bundle'
 alias abe='asdf exec bundle exec'
 
-alias ctags="`brew --prefix`/bin/ctags"
-alias ruby-ctags='ctags --recurse --languages=ruby --exclude=.git --exclude=log'
-alias elixir-ctags='ctags --recurse --languages=Elixir --exclude=.git --exclude=log'
+alias ruby-ctags='ctags -R --languages=ruby --exclude=.git --exclude=log'
+alias elixir-ctags='ctags -R --languages=Elixir --exclude=.git --exclude=log'
 
 # Docker
 alias dkc='docker-compose'
@@ -63,6 +62,3 @@ alias credo="mix credo"
 alias te="RAILS_ENV=test MIX_ENV=test"
 alias gitfm="git diff --name-only | xargs | mix format"
 alias mt="mix test"
-alias src="source ~/.bash_profile"
-alias bp="vim ~/.bash_profile"
-
