@@ -4,8 +4,15 @@ https://www.nerdfonts.com/font-downloads
 https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-macos-e303d25d5b5c#
 
 ```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 brew install --cask google-chrome iterm2 openjdk
 brew install asdf ripgrep fzf tldr fd postgres git
+
+asdf plugin add ruby
+asdf install ruby 2.7.2
 
 # load programming.json in iTerm2 profiles
 
@@ -30,4 +37,6 @@ git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/jeetsukumaran/vim-indentwise
 git clone https://github.com/tpope/vim-rails
 ```
+
+Update README if anything changes
 
