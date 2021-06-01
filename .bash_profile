@@ -9,7 +9,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
 export ASDF_DIR=$(brew --prefix asdf)
 export FZF_DEFAULT_OPTS='--height=40% --preview="cat {}" --preview-window=right:60%:wrap'
 
-. ~/.bashrc
+# . ~/.bashrc
 
 # alias ls='ls -GFh'
 alias bp='vim ~/.bash_profile'
