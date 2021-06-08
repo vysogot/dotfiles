@@ -1,17 +1,10 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-"set background=light
-"let g:solarized_termcolors=256
-"colorscheme solarized
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
-"let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|circleci'
-"let g:ctrlp_working_path_mode = 0
+
 let mapleader = ","
 let g:netrw_sizestyle= "h"
 let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
-" let g:airline_section_b = ''
-" let g:airline_section_z = '%b'
 set tags=./tags;,tags;
 
 autocmd BufWritePre * %s/\s\+$//e
