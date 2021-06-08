@@ -4,6 +4,7 @@ export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
 export FZF_DEFAULT_OPTS='--height=40% --preview="cat {}" --preview-window=right:60%:wrap'
 
+alias ls='ls --color'
 alias bp='vim ~/.bash_profile'
 alias vp='vim ~/.vimrc'
 alias src='source ~/.bash_profile'
