@@ -27,3 +27,6 @@ alias aws-login='aws-vault login -d 8h'
 # Node
 alias j='yarn jest'
 alias jd='yarn test-debug'
+
+# RVM
+source /home/ubuntu/.rvm/scripts/rvm
