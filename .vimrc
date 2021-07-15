@@ -50,5 +50,5 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 "command Eh e %:p:h/$1
 
-set colorcolumn=100
+set colorcolumn=120
 set number
