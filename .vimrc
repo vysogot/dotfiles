@@ -52,3 +52,7 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 set colorcolumn=120
 set number
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
