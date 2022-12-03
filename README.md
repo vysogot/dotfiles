@@ -3,6 +3,8 @@
 https://www.nerdfonts.com/font-downloads
 https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-macos-e303d25d5b5c#
 
+Install Vim with plugins:
+
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -38,5 +40,9 @@ git clone https://github.com/jeetsukumaran/vim-indentwise
 git clone https://github.com/tpope/vim-rails
 ```
 
-Update README if anything changes
+Update for `asdf 10.2`, add this to `.zshrc`:
 
+```
+unset ASDF_DIR
+source $(brew --prefix asdf)/libexec/asdf.sh
+```
