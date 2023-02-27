@@ -38,6 +38,7 @@ git clone https://github.com/vim-airline/vim-airline
 git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/jeetsukumaran/vim-indentwise
 git clone https://github.com/tpope/vim-rails
+git clone https://github.com/pangloss/vim-javascript.git
 ```
 
 Update for `asdf 10.2`, add this to `.zshrc`:
