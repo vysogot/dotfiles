@@ -1,6 +1,6 @@
 # Shell
 # export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ "
-# export CLICOLOR=1
+export CLICOLOR=1
 # export LSCOLORS=ExFxBxDxCxegedabagacad
 # export TERM=xterm-256color
 
@@ -9,7 +9,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
 export ASDF_DIR=$(brew --prefix asdf)
 export FZF_DEFAULT_OPTS='--height=40% --preview="cat {}" --preview-window=right:60%:wrap'
 
-# . ~/.bashrc
+. ~/.bashrc
 
 # alias ls='ls -GFh'
 alias bp='vim ~/.bash_profile'
@@ -22,6 +22,7 @@ alias replace="grep -rl $1 . | xargs sed -i \"\" 's/$1/$2/g'"
 alias start="brew services start"
 alias stop="brew services stop"
 alias restart="brew services restart"
+alias vimpluginupdate="for i in ~/.vim/bundle/*; do git -C $i pull; done"
 
 # Rails
 alias be='bundle exec'
@@ -33,6 +34,7 @@ alias abe='asdf exec bundle exec'
 
 alias ruby-ctags='ctags -R --languages=ruby --exclude=.git --exclude=log'
 alias elixir-ctags='ctags -R --languages=Elixir --exclude=.git --exclude=log'
+alias console='./bin/console.rb'
 
 # Docker
 alias dkc='docker-compose'
