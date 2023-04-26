@@ -47,12 +47,19 @@ nnoremap <leader>. :w<cr>:call AltCommand(expand('%'), ':e')<cr>
 nnoremap <C-p> :Files<cr>
 nnoremap <C-r> :Rg<cr>
 nnoremap <C-g> :Rg <c-r>=expand("<cword>")<cr><cr>
-nnoremap c<C-e> :cd ~/Development/system/apps/shedul-umbrella<cr>
 nnoremap gd :e %:p:h<cr>
 nnoremap gt :A<cr>
 
+autocmd FileType ruby nmap <silent> t<C-m> <Plug>(xmpfilter-mark)
+autocmd FileType ruby xmap <silent> t<C-m> <Plug>(xmpfilter-mark)
+autocmd FileType ruby imap <silent> t<C-m> <Plug>(xmpfilter-mark)
+
+autocmd FileType ruby nmap <silent> t<C-r> <Plug>(xmpfilter-run)
+autocmd FileType ruby xmap <silent> t<C-r> <Plug>(xmpfilter-run)
+autocmd FileType ruby imap <silent> t<C-r> <Plug>(xmpfilter-run)
+
 let test#vim#term_position = "belowright"
-let test#strategy = "dispatch"
+let test#strategy = "basic"
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
