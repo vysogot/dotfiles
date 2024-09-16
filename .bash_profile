@@ -3,6 +3,7 @@
 export CLICOLOR=1
 # export LSCOLORS=ExFxBxDxCxegedabagacad
 # export TERM=xterm-256color
+alias git='LC_ALL=en_US git'
 
 export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case'
@@ -26,8 +27,9 @@ alias dicstat="du -sh * | sort -rh"
 alias nowarnings="RUBYOPT='-W0'"
 
 # Network
-alias apport='lsof -i -P -n | grep LISTEN | awk "{print \$2}" | xargs ps -p'
 alias lis="lsof -i -P -n | grep LISTEN"
+alias apport='lis | awk "{print \$2}" | xargs ps -p'
+alias mfk="apport | grep -E 'node|puma' | awk '{print $1}'"
 
 # Rails
 alias be='bundle exec'
@@ -69,5 +71,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Elixir
 alias credo="mix credo"
 alias te="RAILS_ENV=test MIX_ENV=test"
+# alias check="abe rubocop -a $(git diff --name-only | xargs)"
 alias gitfm="git diff --name-only | xargs | mix format"
 alias mt="mix test"
+alias video_to_gif='function video_to_gif(){ ffmpeg -i "$1" -r 5 "${1%.*}.gif" && gifsicle -O3 "${1%.*}.gif" -o "${1%.*}.gif" && osascript -e "display notification \"${1%.*}.gif successfully converted and saved\" with title \"MOV2GIF SUCCESS!\""};video_to_gif'

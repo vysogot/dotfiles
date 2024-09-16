@@ -30,3 +30,18 @@ source ~/.bash_profile
 
 unset ASDF_DIR
 source $(brew --prefix asdf)/libexec/asdf.sh
+
+jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        java -version
+ }
+
+ unsetopt correct_all
+
+# bun completions
+[ -s "/Users/jgodawa/.bun/_bun" ] && source "/Users/jgodawa/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
