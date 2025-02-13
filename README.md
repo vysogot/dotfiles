@@ -6,9 +6,7 @@ https://medium.com/@jeantimex/how-to-configure-iterm2-and-vim-like-a-pro-on-maco
 Install Brew: 
 
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # brew install --cask google-chrome iterm2 openjdk
 brew install asdf ripgrep tldr fd git
