@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ENABLE_CORRECTION="true"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # eval "$(init zsh)"
@@ -45,3 +45,8 @@ jdk() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
